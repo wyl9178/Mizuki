@@ -191,7 +191,7 @@ export const navBarConfig: NavBarConfig = {
 				},
 				{
 					name: "Bilibili",
-					url: "https://space.bilibili.com/701864046",
+					url: "https://space.bilibili.com/3546704626322093",
 					external: true,
 					icon: "fa6-brands:bilibili",
 				},
@@ -256,8 +256,8 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Bilibli",
 			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
-		},
+			url: "https://space.bilibili.com/3546704626322093",
+		},/*
 		{
 			name: "Gitee",
 			icon: "mdi:git",
@@ -272,7 +272,7 @@ export const profileConfig: ProfileConfig = {
 			name: "Discord",
 			icon: "fa6-brands:discord",
 			url: "https://discord.gg/MqW6TcQtVM",
-		},
+		},*/
 	],
 };
 
