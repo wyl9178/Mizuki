@@ -257,12 +257,12 @@ export const profileConfig: ProfileConfig = {
 			name: "Bilibli",
 			icon: "fa6-brands:bilibili",
 			url: "https://space.bilibili.com/3546704626322093",
-		},
-		{
-			name: "Tiktok",
-			icon: "fa6-brands:tiktok",
-			url: "https://www.douyin.com/user/MS4wLjABAAAAUQAkKBeDuCLNR0SY052hvOcVBca2P9fCeWAxjbLE4CfohMtjBMp3VJh3uF2QWS3j?from_tab_name=main&relation=0&vid=7534151914452782393",
 		},/*
+		{
+			name: "Gitee",
+			icon: "mdi:git",
+			url: "https://gitee.com/matsuzakayuki",
+		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
