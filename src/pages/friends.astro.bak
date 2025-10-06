@@ -22,25 +22,12 @@ const items = [
 		tags: ["网站帮做"],
 	},
 	{
-		title: "红色警戒2:重录未来mod",
-		imgurl: "https://www.yra2.com/",
-		desc: "雪域工作室的一个红警2的mod",
-		siteurl: "https://www.yra2.com/",
-		tags: ["游戏"],
-	},
-	{
-		title: "阿宏搞数码的官网",
-		imgurl: "https://ahong.mysxl.cn/",
-		desc: "超级nb的数码大佬",
-		siteurl: "https://ahong.mysxl.cn/",
-		tags: ["数码"],
-	},
-	{
-		title: "windows电脑工作室",
-		imgurl: "https://windngzs.mysxl.cn/",
-		desc: "和阿宏实力差不多的小佬",
-		siteurl: "https://windngzs.mysxl.cn/",
-		tags: ["数码"],
+		title: "Zevru",
+		imgurl:
+			"http://q.qlogo.cn/headimg_dl?dst_uin=3231515355&spec=640&img_type=jpg",
+		desc: "Protect What You Love.",
+		siteurl: "https://ycenzh.github.io",
+		tags: ["Docs"],
 	},
 ];
 
