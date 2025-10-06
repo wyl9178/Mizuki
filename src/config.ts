@@ -184,22 +184,10 @@ export const navBarConfig: NavBarConfig = {
 			icon: "material-symbols:link",
 			children: [
 				{
-					name: "GitHub",
-					url: "https://github.com/matsuzaka-yuki/Mizuki",
-					external: true,
-					icon: "fa6-brands:github",
-				},
-				{
 					name: "Bilibili",
 					url: "https://space.bilibili.com/3546704626322093",
 					external: true,
 					icon: "fa6-brands:bilibili",
-				},
-				{
-					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
-					external: true,
-					icon: "mdi:git",
 				},
 			],
 		},
@@ -262,17 +250,7 @@ export const profileConfig: ProfileConfig = {
 			name: "Tiktok",
 			icon: "fa6-brands:tiktok",
 			url: "https://www.douyin.com/user/MS4wLjABAAAAUQAkKBeDuCLNR0SY052hvOcVBca2P9fCeWAxjbLE4CfohMtjBMp3VJh3uF2QWS3j?from_tab_name=main&relation=0&vid=7534151914452782393",
-		},/*
-		{
-			name: "GitHub",
-			icon: "fa6-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
 		},
-		{
-			name: "Discord",
-			icon: "fa6-brands:discord",
-			url: "https://discord.gg/MqW6TcQtVM",
-		},*/
 	],
 };
 
