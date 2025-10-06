@@ -46,13 +46,13 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/banner/1.jpg",
+				"/assets/banner/1.png",
 				"/assets/banner/2.jpg",
 				"/assets/banner/3.jpg",
 				"/assets/banner/4.jpg",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/banner/1.jpg",
+				"/assets/banner/1.png",
 				"/assets/banner/2.jpg",
 				"/assets/banner/3.jpg",
 				"/assets/banner/4.jpg",
@@ -64,7 +64,7 @@ export const siteConfig: SiteConfig = {
 		carousel: {
 			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
 
-			interval: 1.5, // 轮播间隔时间（秒）
+			interval: 3.0, // 轮播间隔时间（秒）
 		},
 
 		// PicFlow API支持(智能图片API)
