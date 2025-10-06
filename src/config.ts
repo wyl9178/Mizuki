@@ -46,24 +46,16 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/d1.webp",
-				"/assets/desktop-banner/d2.webp",
-				"/assets/desktop-banner/d3.webp",
-				"/assets/desktop-banner/d4.webp",
-				"/assets/desktop-banner/d5.webp",
-				"/assets/desktop-banner/d6.webp",
-				"/assets/desktop-banner/d7.webp",
-				"/assets/desktop-banner/d8.webp",
+				"/assets/banner/1.jpg",
+				"/assets/banner/2.jpg",
+				"/assets/banner/3.jpg",
+				"/assets/banner/4.jpg",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/mobile-banner/m1.webp",
-				"/assets/mobile-banner/m2.webp",
-				"/assets/mobile-banner/m3.webp",
-				"/assets/mobile-banner/m4.webp",
-				"/assets/mobile-banner/m5.webp",
-				"/assets/mobile-banner/m6.webp",
-				"/assets/mobile-banner/m7.webp",
-				"/assets/mobile-banner/m8.webp",
+				"/assets/banner/1.jpg",
+				"/assets/banner/2.jpg",
+				"/assets/banner/3.jpg",
+				"/assets/banner/4.jpg",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
@@ -131,10 +123,10 @@ export const siteConfig: SiteConfig = {
 	// 字体配置
 	font: {
 		zenMaruGothic: {
-			enable: true, // 启用全局圆体适合日语和英语，对中文适配一般
+			enable: false, // 启用全局圆体适合日语和英语，对中文适配一般
 		},
 		hanalei: {
-			enable: false, // 启用 Hanalei 字体作为全局字体，适合中文去使用
+			enable: true, // 启用 Hanalei 字体作为全局字体，适合中文去使用
 		},
 	},
 	showLastModified: true, // 控制“上次编辑”卡片显示的开关
