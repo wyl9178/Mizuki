@@ -1,50 +1,11 @@
-# About This Site
+# 龙尊的自我介绍
 
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/matsuzaka-yuki/mizuki) theme.
-
-::github{repo="matsuzaka-yuki/Mizuki"}
-
-## 🌟 Theme Features
-
-### 🎨 Design & User Experience
-- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
-- **Fully Responsive** - Optimized for all devices from mobile to desktop
-- **Dark/Light Mode** - Automatic theme switching with smooth transitions
-- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
-- **Smooth Animations** - Fluid page transitions and interactive elements
-
-### 🔍 Content & Search
-- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
-- **Enhanced Markdown** - Extended syntax with code highlighting and math support
-- **Interactive Table of Contents** - Auto-scroll navigation for long articles
-- **RSS Feed Generation** - Stay updated with automatic feed generation
-- **Reading Time Estimation** - Know how long articles take to read
-- **Post Categorization** - Organize content with tags and categories
-
-
-
-### 📱 Special Pages
-- **Anime Tracking Page** - Track your anime watching progress with ratings
-- **Friends Links Page** - Showcase friend websites with beautiful cards
-- **Diary/Moments Page** - Share life moments like social media posts
-- **Archive Page** - Organized timeline view of all posts
-- **About Page** - Customizable personal introduction (this page!)
-
-### 🛠 Technical Features
-- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
-- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
-- **Image Optimization** - PhotoSwipe gallery with lazy loading
-- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
-- **Performance Optimized** - Fast loading with caching and optimization
-- **Comment System Ready** - Integration support for Twikoo comments
-
-### 🎯 Advanced Markdown Features
-- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
-- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
-- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
-- **Syntax Highlighting** - Advanced code highlighting with line numbers
-- **Copy Code Buttons** - Easy code copying functionality
-
----
-
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+指尖落在机械键盘上的瞬间，世界便有了新的注脚。于我而言，键盘从不是冰冷的输入工具，而是盛满无限可能的玩具——每一次敲击都像在搭建秘密城堡的砖块，每一个按键组合都藏着通往未知领域的密语。而代码，就是我与这个数字世界对话的专属语言，用C++的严谨构建逻辑的骨架，用Python的灵活编织创意的肌理，再以易语言的直白打通想法与现实的壁垒，这三重“buff”不是简单的技能叠加，而是我拆解问题、重构世界的三套独特语法。
+ 
+我总在字节的缝隙里寻找编程的灵感。或许是刷到一段自动剪辑的短视频，便会琢磨如何用Python调用API，让零散的素材根据背景音乐的节奏自动拼接；又或是看到朋友手动整理表格数据时的繁琐，就想用C++写一段高效的排序算法，让重复的工作在毫秒间完成。有次为了实现“根据天气自动推荐穿搭”的小工具，我先在易语言里搭建可视化界面，让操作像点击手机APP一样简单，再用Python爬取实时天气数据，最后通过C++优化数据传输的速度，当家人打开程序就能看到“今日晴，建议穿薄外套”的提示时，我忽然明白，编程于我而言，从来不是纸上谈兵的理论，而是能为生活缝补细节的实用魔法。
+ 
+这种对编程的热爱，更像是一场不设终点的探索。我曾为了搞懂一个复杂的循环逻辑，在电脑前坐了整整一下午，从夕阳西下到夜色漫进房间，当屏幕上终于跳出正确的运行结果时，那种成就感远胜过任何游戏通关的喜悦。也试过在学习新框架时屡屡碰壁，代码报错的红色警告像一道道关卡，但每解决一个bug，就像解锁了新的技能，让我有勇气去挑战更复杂的项目。有人问我为什么总在跟代码“较劲”，其实答案很简单：在这个由0和1构成的世界里，没有既定的规则，没有“不可能”的限制，只要有想法，就能通过键盘敲出属于自己的答案。
+ 
+我从不把编程当作一种“技能”来炫耀，它更像是我观察世界的一双眼睛。当别人看到的是APP的界面，我看到的是背后无数行逻辑代码的协作；当别人感叹智能设备的便捷，我思考的是算法如何理解人类的需求。这种视角让我对世界保持着好奇与敬畏，也让我明白，真正的编程不是写多么复杂的代码，而是用最简单的逻辑解决最实际的问题，用创意的思维打破固有的边界。
+ 
+如今，我的键盘上已经留下了淡淡的使用痕迹，那些磨损的按键记录着每一次灵感的迸发，每一次问题的攻克。未来，我依然会带着这三套“语言”，在字节的世界里继续探索——或许是开发一款帮助他人的小工具，或许是尝试更前沿的人工智能领域，无论方向如何，我始终相信，只要指尖不停，脑洞不设限，就能在代码的宇宙里，写出属于自己的无限可能。

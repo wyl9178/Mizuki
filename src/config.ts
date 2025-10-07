@@ -46,23 +46,17 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/banner/1.png",
-				"/assets/banner/2.jpg",
-				"/assets/banner/3.jpg",
-				"/assets/banner/4.jpg",
+				"/assets/banner/A.jpg",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/banner/1.png",
-				"/assets/banner/2.jpg",
-				"/assets/banner/3.jpg",
-				"/assets/banner/4.jpg",
+				"/assets/banner/A.jpg",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
 		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
 
 		carousel: {
-			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
+			enable: false, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
 
 			interval: 3.0, // 轮播间隔时间（秒）
 		},
@@ -186,21 +180,6 @@ export const navBarConfig: NavBarConfig = {
 			url: "#",
 			icon: "material-symbols:more-horiz",
 			children: [
-				{
-					name: "项目",
-					url: "/projects/",
-					icon: "material-symbols:work",
-				},
-				{
-					name: "技能",
-					url: "/skills/",
-					icon: "material-symbols:psychology",
-				},
-				{
-					name: "时间线",
-					url: "/timeline/",
-					icon: "material-symbols:timeline",
-				},
 				{
 					name: "赞助支持",
 					url: "/donate/",
