@@ -201,6 +201,11 @@ export const navBarConfig: NavBarConfig = {
 					url: "/timeline/",
 					icon: "material-symbols:timeline",
 				},
+				{
+					name: "赞助支持",
+					url: "/donate/",
+					icon: "material-symbols:favorite",
+				},
 			],
 		},
 	],
