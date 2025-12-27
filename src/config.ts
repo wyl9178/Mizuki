@@ -129,10 +129,10 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true, // 启用全屏壁纸功能,非Banner模式下生效
 	src: {
 		desktop: [
-			"/assets/banner/o.png",
+			"/assets/banner/o.jpg",
 		], // 桌面横幅图片
 		mobile: [
-			"/assets/banner/o.png",
+			"/assets/banner/o.jpg",
 		], // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
