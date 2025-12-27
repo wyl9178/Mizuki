@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026新年快乐！ | 新年祝福</title>
+    
+    <!-- 引入Google字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 全局样式 - 使用新字体 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: linear-gradient(135deg, #0c2461 0%, #1e3799 25%, #4a69bd 50%, #6a89cc 75%, #82ccdd 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="%23FFD700" opacity="0.8"/><circle cx="16" cy="16" r="6" fill="%23FF6B6B"/></svg>') 16 16, auto;
+        }
+        
+        /* 点击烟花容器 */
+        .click-fireworks {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .click-particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particle-explode 1s ease-out forwards;
+        }
+        
+        @keyframes particle-explode {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty)) scale(0);
+                opacity: 0;
+            }
+        }
+        
+        /* 背景烟花 */
+        .firework {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: #ffdd59;
+            border-radius: 50%;
+            animation: firework 2s ease-out infinite;
+            z-index: 1;
+        }
+        
+        @keyframes firework {
+            0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 1; }
+            50% { opacity: 1; transform: translateY(40vh) translateX(var(--move-x)) scale(1); }
+            100% { transform: translateY(-10vh) translateX(calc(var(--move-x) * 1.5)) scale(1.5); opacity: 0; }
+        }
+        
+        /* 主容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* 头部区域 - 使用艺术字体 */
+        .header {
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+        }
+        
+        .year-number {
+            font-size: 9rem;
+            font-weight: 900;
+            font-family: 'ZCOOL QingKe HuangYou', cursive;
+            background: linear-gradient(45deg, #FFD700, #FFEC8B, #FFA500, #FFD700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+            margin-bottom: 1.5rem;
+            animation: pulse-glow 3s infinite alternate;
+            letter-spacing: 5px;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+                transform: scale(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8));
+                transform: scale(1.03);
+            }
+        }
+        
+        .greeting {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            font-family: 'Ma Shan Zheng', cursive;
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .greeting::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #FFD700, transparent);
+            border-radius: 2px;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        /* 倒计时区域 */
+        .countdown-section {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 4rem 2rem;
+            margin: 4rem auto;
+            max-width: 1000px;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #FFD700, #FF6B6B, #4ECDC4, #FFD700);
+            border-radius: 27px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: border-glow 4s linear infinite;
+        }
+        
+        @keyframes border-glow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        
+        .countdown-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #FFD700;
+            font-family: 'Ma Shan Zheng', cursive;
+            letter-spacing: 2px;
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-unit {
+            text-align: center;
+            min-width: 160px;
+            transition: transform 0.3s ease;
+        }
+        
+        .countdown-unit:hover {
+            transform: translateY(-10px);
+        }
+        
+        .countdown-value {
+            font-size: 5rem;
+            font-weight: 900;
+            font-family: 'ZCOOL QingKe HuangYou', cursive;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            display: block;
+            min-width: 140px;
+            border: 3px solid rgba(255, 215, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-value::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(30deg); }
+        }
+        
+        .countdown-label {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+        
+        /* 滚动祝福语区域 */
+        .scrolling-blessings {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 4rem 2rem;
+            border-radius: 25px;
+            margin: 4rem auto;
+            max-width: 900px;
+            position: relative;
+            overflow: hidden;
+            min-height: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .scrolling-blessings::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, rgba(12, 36, 97, 0.9), transparent);
+            z-index: 3;
+        }
+        
+        .scrolling-blessings::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, rgba(12, 36, 97, 0.9), transparent);
+            z-index: 3;
+        }
+        
+        .blessings-container {
+            height: 300px;
+            overflow-y: hidden;
+            position: relative;
+        }
+        
+        .blessing-item {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+            border-left: 5px solid transparent;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blessing-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .blessing-item:nth-child(3n+1) {
+            border-left-color: #FFD700;
+        }
+        
+        .blessing-item:nth-child(3n+2) {
+            border-left-color: #4ECDC4;
+        }
+        
+        .blessing-item:nth-child(3n+3) {
+            border-left-color: #FF6B6B;
+        }
+        
+        .blessing-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 1s ease;
+        }
+        
+        .blessing-item.active::before {
+            transform: translateX(100%);
+        }
+        
+        .blessing-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: icon-float 3s ease-in-out infinite;
+        }
+        
+        @keyframes icon-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .blessing-text {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .blessing-author {
+            display: block;
+            text-align: right;
+            margin-top: 1rem;
+            font-style: italic;
+            opacity: 0.7;
+            font-size: 1.2rem;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-top: 5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '❤';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #0c2461 0%, #1e3799 50%);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+        
+        .signature {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Ma Shan Zheng', cursive;
+            letter-spacing: 2px;
+        }
+        
+        .instruction {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            margin-bottom: 2rem;
+            animation: instruction-pulse 2s infinite;
+        }
+        
+        @keyframes instruction-pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 3rem;
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.2), rgba(255, 107, 107, 0.2));
+            color: #FFD700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .back-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+        
+        .back-link:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(255, 107, 107, 0.3));
+        }
+        
+        .back-link:hover::before {
+            left: 100%;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .year-number { font-size: 6rem; }
+            .greeting { font-size: 3rem; }
+            .subtitle { font-size: 1.5rem; }
+            .countdown-value { font-size: 3.5rem; min-width: 100px; }
+            .countdown-container { gap: 1.5rem; }
+            .countdown-unit { min-width: 120px; }
+            .blessing-text { font-size: 1.4rem; }
+            .scrolling-blessings { padding: 2rem 1rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .year-number { font-size: 4.5rem; }
+            .greeting { font-size: 2.5rem; }
+            .countdown-title { font-size: 2rem; }
+            .countdown-container { flex-direction: column; align-items: center; }
+            .countdown-unit { width: 100%; max-width: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 点击烟花容器 -->
+    <div id="click-fireworks" class="click-fireworks"></div>
+    
+    <!-- 动态烟花背景 -->
+    <div id="fireworks-container"></div>
+    
+    <div class="container">
+        <!-- 头部区域 -->
+        <header class="header">
+            <div class="year-number">2026</div>
+            <h1 class="greeting">🎊 新年快乐 🎊</h1>
+            <p class="subtitle">告别2025的精彩篇章，迎接2026的辉煌序曲。愿新的一年为您带来无尽的喜悦、丰硕的成就与永恒的平安！</p>
+        </header>
+        
+        <!-- 倒计时区域 -->
+        <section class="countdown-section">
+            <h2 class="countdown-title">⏳ 距离2026年元旦还有：</h2>
+            <div class="countdown-container">
+                <div class="countdown-unit">
+                    <span id="days" class="countdown-value">00</span>
+                    <span class="countdown-label">天</span>
+                </div>
+                <div class="countdown-unit">
+                    <span id="hours" class="countdown-value">00</span>
+                    <span class="countdown-label">小时</span>
+                </div>
+                <div class="countdown-unit">
+                    <span id="minutes" class="countdown-value">00</span>
+                    <span class="countdown-label">分钟</span>
+                </div>
+                <div class="countdown-unit">
+                    <span id="seconds" class="countdown-value">00</span>
+                    <span class="countdown-label">秒</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 滚动祝福语区域 -->
+        <section class="scrolling-blessings">
+            <h2 style="text-align: center; margin-bottom: 3rem; color: #FFD700; font-size: 2.5rem; font-family: 'Ma Shan Zheng', cursive;">🎋 2026新年祝福语 🎋</h2>
+            <p style="text-align: center; margin-bottom: 2rem; opacity: 0.8; font-size: 1.2rem;">（滚动查看更多祝福，点击屏幕释放烟花）</p>
+            
+            <div class="blessings-container" id="blessings-container">
+                <!-- 祝福语将通过JavaScript动态添加 -->
+            </div>
+        </section>
+        
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p class="signature">✨ 恭祝您与家人2026年幸福安康、万事胜意！ ✨</p>
+            <p class="instruction">💫 点击页面任意位置释放新年烟花</p>
+            <a href="/" class="back-link">🏮 返回博客首页</a>
+        </footer>
+    </div>
+    
+    <script>
+        // 祝福语数据
+        const blessings = [
+            {icon: "🎯", text: "愿2026年您的事业如日中天，每一步都踏在成功的节拍上，每个目标都如星辰般璀璨实现。", author: "事业祝福"},
+            {icon: "❤️", text: "愿健康常伴您左右，家庭温馨如春，每一天都洋溢着欢声笑语，平安喜乐永驻心间。", author: "健康祈愿"},
+            {icon: "🌟", text: "愿新的一年里，您能突破自我局限，收获智慧的果实，友谊的温暖和满满的幸福回忆。", author: "成长寄语"},
+            {icon: "📚", text: "愿知识的灯塔照亮您前行的道路，灵感如泉涌不断，每一次探索都带来新的发现与喜悦。", author: "学业进步"},
+            {icon: "💼", text: "愿工作项目顺利推进，团队协作默契无间，创新思维源源不断，职场之路步步高升。", author: "职场顺利"},
+            {icon: "🌍", text: "愿您的旅途遍布美景，心中常怀好奇与敬畏，在世界的每个角落都能发现生活的诗意。", author: "旅途平安"},
+            {icon: "🎨", text: "愿创造力如繁花绽放，艺术灵感永不枯竭，每一个创作都能触动心灵，传递美好。", author: "创意无限"},
+            {icon: "🤝", text: "愿真挚的友谊跨越山海，知心朋友遍布四方，彼此扶持，共同成长，情谊长存。", author: "友谊长存"},
+            {icon: "💰", text: "愿财运亨通如江河奔流，投资眼光精准独到，财富积累稳健增长，物质生活丰裕安康。", author: "财运亨通"},
+            {icon: "☮️", text: "愿内心始终充满平和与感恩，眼中看到世间的美好，心中珍藏人间的温暖。", author: "心灵平静"},
+            {icon: "🚀", text: "愿技术能力突飞猛进，代码如诗优雅，项目顺利上线，在数字世界创造非凡价值。", author: "技术精进"},
+            {icon: "🌱", text: "愿生活节奏张弛有度，工作与休闲平衡和谐，在忙碌中不忘品味生活的点滴美好。", author: "生活平衡"},
+            {icon: "🎵", text: "愿音乐常伴左右，旋律抚慰心灵，在音符中找到情感的共鸣和精神的慰藉。", author: "音乐相伴"},
+            {icon: "🍀", text: "愿好运连连不断，机遇之门常开，每一次选择都导向更美好的未来。", author: "好运连连"},
+            {icon: "🌅", text: "愿每个清晨都充满希望，每个黄昏都满载收获，在时光流转中感受生命的丰盈。", author: "每日祝福"}
+        ];
+        
+        // 生成随机背景烟花
+        function createFireworks() {
+            const container = document.getElementById('fireworks-container');
+            for (let i = 0; i < 25; i++) {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = Math.random() * 100 + 'vw';
+                firework.style.animationDelay = Math.random() * 3 + 's';
+                firework.style.animationDuration = (Math.random() * 1.5 + 1.5) + 's';
+                firework.style.setProperty('--move-x', (Math.random() * 100 - 50) + 'px');
+                firework.style.backgroundColor = getRandomColor();
+                container.appendChild(firework);
+            }
+        }
+        
+        // 点击烟花效果
+        function createClickFireworks(x, y) {
+            const container = document.getElementById('click-fireworks');
+            const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#9B59B6', '#1ABC9C', '#3498DB'];
+            
+            // 创建爆炸粒子
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'click-particle';
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // 随机方向
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 120 + 80;
+                const tx = Math.cos(angle) * speed;
+                const ty = Math.sin(angle) * speed;
+                
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                particle.style.animationDuration = (Math.random() * 0.5 + 0.8) + 's';
+                
+                container.appendChild(particle);
+                
+                // 移除粒子
+                setTimeout(() => {
+                    if (particle.parentNode === container) {
+                        container.removeChild(particle);
+                    }
+                }, 1000);
+            }
+            
+            // 添加爆炸声音效果（可选）
+            playFireworkSound();
+        }
+        
+        // 播放烟花声音（使用Web Audio API）
+        function playFireworkSound() {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 0.5);
+                
+                gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                
+                oscillator.start();
+                oscillator.stop(audioContext.currentTime + 0.5);
+            } catch (e) {
+                console.log("音频上下文不支持，跳过声音效果");
+            }
+        }
+        
+        function getRandomColor() {
+            const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#FF9FF3', '#54A0FF', '#00D2D3'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        // 倒计时计算
+        function updateCountdown() {
+            const newYear2026 = new Date('January 1, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = newYear2026 - now;
+            
+            if (timeLeft < 0) {
+                document.querySelector('.countdown-title').textContent = '🎉 2026新年已到来！ 🎉';
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // 初始化滚动祝福语
+        function initBlessings() {
+            const container = document.getElementById('blessings-container');
+            
+            // 打乱祝福语顺序
+            const shuffledBlessings = [...blessings].sort(() => Math.random() - 0.5);
+            
+            // 添加祝福语到容器
+            shuffledBlessings.forEach((blessing, index) => {
+                const blessingElement = document.createElement('div');
+                blessingElement.className = 'blessing-item';
+                blessingElement.innerHTML = `
+                    <div class="blessing-icon">${blessing.icon}</div>
+                    <p class="blessing-text">${blessing.text}</p>
+                    <span class="blessing-author">—— ${blessing.author}</span>
+                `;
+                
+                container.appendChild(blessingElement);
+                
+                // 延迟激活每个祝福项
+                setTimeout(() => {
+                    blessingElement.classList.add('active');
+                }, 500 + index * 400);
+            });
+            
+            // 设置自动滚动
+            let scrollPosition = 0;
+            const scrollContainer = container;
+            
+            function autoScroll() {
+                scrollPosition += 0.5;
+                
+                if (scrollPosition >= scrollContainer.scrollHeight - scrollContainer.clientHeight) {
+                    // 滚动到底部后，等待一段时间然后重置
+                    setTimeout(() => {
+                        scrollContainer.scrollTop = 0;
+                        scrollPosition = 0;
+                    }, 3000);
+                } else {
+                    scrollContainer.scrollTop = scrollPosition;
+                }
+            }
+            
+            setInterval(autoScroll, 50);
+        }
+        
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            createFireworks();
+            updateCountdown();
+            initBlessings();
+            
+            // 设置倒计时更新间隔
+            setInterval(updateCountdown, 1000);
+            
+            // 添加点击事件监听器
+            document.addEventListener('click', function(e) {
+                createClickFireworks(e.clientX, e.clientY);
+            });
+            
+            // 添加触摸事件支持
+            document.addEventListener('touchstart', function(e) {
+                const touch = e.touches[0];
+                createClickFireworks(touch.clientX, touch.clientY);
+            });
+            
+            // 添加键盘事件支持（空格键也触发烟花）
+            document.addEventListener('keydown', function(e) {
+                if (e.code === 'Space') {
+                    createClickFireworks(
+                        window.innerWidth / 2 + (Math.random() * 200 - 100),
+                        window.innerHeight / 2 + (Math.random() * 200 - 100)
+                    );
+                    e.preventDefault();
+                }
+            });
+            
+            // 添加一些交互效果
+            const countdownUnits = document.querySelectorAll('.countdown-unit');
+            countdownUnits.forEach(unit => {
+                unit.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.05)';
+                });
+                unit.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // 添加鼠标移动追踪效果
+            document.addEventListener('mousemove', function(e) {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                
+                // 轻微的背景动态效果
+                document.body.style.background = `
+                    linear-gradient(
+                        135deg, 
+                        hsl(220, ${70 + y * 10}%, ${20 + x * 5}%) 0%,
+                        hsl(220, ${65 + y * 10}%, ${30 + x * 5}%) 25%,
+                        hsl(220, ${60 + y * 10}%, ${40 + x * 5}%) 50%,
+                        hsl(220, ${55 + y * 10}%, ${50 + x * 5}%) 75%,
+                        hsl(220, ${50 + y * 10}%, ${60 + x * 5}%) 100%
+                    )
+                `;
+            });
+        });
+        
+        // 页面可见性变化时重新生成烟花
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                const container = document.getElementById('fireworks-container');
+                container.innerHTML = '';
+                createFireworks();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -157,17 +157,9 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
-			name: "链接",
-			url: "/links/",
+			name: "新年祝福",
+			url: "/2026.html",
 			icon: "material-symbols:link",
-			children: [
-				{
-					name: "Bilibili",
-					url: "https://space.bilibili.com/3546704626322093",
-					external: true,
-					icon: "fa6-brands:bilibili",
-				},
-			],
 		},
 		{
 			name: "关于",
@@ -205,6 +197,11 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:tiktok",
 			url: "https://www.douyin.com/user/MS4wLjABAAAAUQAkKBeDuCLNR0SY052hvOcVBca2P9fCeWAxjbLE4CfohMtjBMp3VJh3uF2QWS3j?from_tab_name=main&relation=0&vid=7534151914452782393",
 		},
+		{
+			name: "QQ",
+			icon: "fa6-brands:qq",
+			url: "https://qm.qq.com/q/F66bTXo0ec",
+		},
 	],
 };
 
@@ -230,7 +227,7 @@ export const commentConfig: CommentConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "公告", // 公告标题
-	content: "目前仍在持续补充新网站的内容,请耐心等待.", // 公告内容
+	content: "新年快乐，你好2026", // 公告内容
 	closable: false, // 允许用户关闭公告
 	link: {
 		enable: false, // 启用链接
