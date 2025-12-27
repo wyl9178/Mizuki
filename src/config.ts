@@ -46,10 +46,10 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/banner/A.jpg",
+				"/assets/banner/o.jpg",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/banner/A.jpg",
+				"/assets/banner/o.jpg",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
@@ -76,15 +76,15 @@ export const siteConfig: SiteConfig = {
 
 			subtitle: [
 				"一个会c++和py的同学",
-				"一个会c++和py的同学",
-				"一个会c++和py的同学",
-				"一个会c++和py的同学",
+				"望新的一年开开心心没烦恼",
+				"你好2026",
+				"新年快乐",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
 
 				speed: 100, // 打字速度（毫秒）
-				deleteSpeed: 50, // 删除速度（毫秒）
+				deleteSpeed: 30, // 删除速度（毫秒）
 				pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
 			},
 		},
@@ -129,16 +129,10 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true, // 启用全屏壁纸功能,非Banner模式下生效
 	src: {
 		desktop: [
-			"/assets/banner/1.png",
-			"/assets/banner/2.jpg",
-			"/assets/banner/3.jpg",
-			"/assets/banner/4.jpg",
+			"/assets/banner/o.png",
 		], // 桌面横幅图片
 		mobile: [
-			"/assets/banner/1.png",
-			"/assets/banner/2.jpg",
-			"/assets/banner/3.jpg",
-			"/assets/banner/4.jpg",
+			"/assets/banner/o.png",
 		], // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
