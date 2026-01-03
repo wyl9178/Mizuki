@@ -151,7 +151,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
-			name: "新年祝福",
+			name: "春节祝福",
 			url: "/2026.html",
 			icon: "material-symbols:link",
 		},
@@ -221,7 +221,7 @@ export const commentConfig: CommentConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "公告", // 公告标题
-	content: "新年快乐，你好2026", // 公告内容
+	content: "DragnWing-SE重磅上线！", // 公告内容
 	closable: false, // 允许用户关闭公告
 	link: {
 		enable: false, // 启用链接

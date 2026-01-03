@@ -478,7 +478,7 @@
         <!-- 头部区域 -->
         <header class="header">
             <div class="year-number">2026</div>
-            <h1 class="greeting">🎊 新年快乐 🎊</h1>
+            <h1 class="greeting">🎊 春节快乐 🎊</h1>
             <p class="subtitle">告别2025的精彩篇章，迎接2026的辉煌序曲。愿新的一年为您带来无尽的喜悦、丰硕的成就与永恒的平安！</p>
         </header>
         
@@ -625,12 +625,12 @@
         
         // 倒计时计算
         function updateCountdown() {
-            const newYear2026 = new Date('January 1, 2026 00:00:00').getTime();
+            const newYear2026 = new Date('February 16, 2026 00:00:00').getTime();
             const now = new Date().getTime();
             const timeLeft = newYear2026 - now;
             
             if (timeLeft < 0) {
-                document.querySelector('.countdown-title').textContent = '🎉 2026新年已到来！ 🎉';
+                document.querySelector('.countdown-title').textContent = '🎉 春节已到来！ 🎉';
                 document.getElementById('days').textContent = '00';
                 document.getElementById('hours').textContent = '00';
                 document.getElementById('minutes').textContent = '00';
