@@ -1,6 +1,6 @@
 ---
 title: DragnWing-SE正式上线
-published: 2026-1-3
+published: 2026-01-03
 description: 龙尊原创系统
 tags: [系统]
 category: DragnWing系列
