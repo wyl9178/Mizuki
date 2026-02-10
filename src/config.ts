@@ -78,7 +78,7 @@ export const siteConfig: SiteConfig = {
 				"一个会c++和py的同学",
 				"望新的一年开开心心没烦恼",
 				"你好2026",
-				"新年快乐",
+				"新春快乐",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -190,11 +190,6 @@ export const profileConfig: ProfileConfig = {
 			name: "Tiktok",
 			icon: "fa6-brands:tiktok",
 			url: "https://www.douyin.com/user/MS4wLjABAAAAUQAkKBeDuCLNR0SY052hvOcVBca2P9fCeWAxjbLE4CfohMtjBMp3VJh3uF2QWS3j?from_tab_name=main&relation=0&vid=7534151914452782393",
-		},
-		{
-			name: "QQ",
-			icon: "fa6-brands:qq",
-			url: "https://qm.qq.com/q/F66bTXo0ec",
 		},
 	],
 };

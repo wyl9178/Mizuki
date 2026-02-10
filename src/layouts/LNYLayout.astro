@@ -1,0 +1,21 @@
+---
+const { title } = Astro.props;
+---
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <style is:global>
+      body {
+        background-color: #8B0000; /* 深红背景 */
+        background-image: radial-gradient(circle, #b30000 0%, #800000 100%);
+        color: #fff;
+        margin: 0;
+        font-family: "Microsoft YaHei", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
