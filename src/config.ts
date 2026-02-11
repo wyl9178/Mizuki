@@ -14,7 +14,6 @@ import type {
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 
-
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
@@ -31,7 +30,6 @@ export const siteConfig: SiteConfig = {
 		fixed: false, // 对访问者隐藏主题色选择器
 	},
 
-	
 	bangumi: {
 		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 	},
@@ -45,12 +43,8 @@ export const siteConfig: SiteConfig = {
 
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
-			desktop: [
-				"/assets/banner/o.jpg",
-			], // 桌面横幅图片
-			mobile: [
-				"/assets/banner/o.jpg",
-			], // 移动横幅图片
+			desktop: ["/assets/banner/o.jpg"], // 桌面横幅图片
+			mobile: ["/assets/banner/o.jpg"], // 移动横幅图片
 		}, // 使用本地横幅图片
 
 		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
@@ -75,10 +69,10 @@ export const siteConfig: SiteConfig = {
 			title: "龙尊的个人博客", // 主页横幅主标题
 
 			subtitle: [
-				"一个会c++和py的同学",
+				"祝您新春快乐，马到成功！",
 				"望新的一年开开心心没烦恼",
-				"你好2026",
-				"新年快乐",
+				"你好2026，新春快乐",
+				"钰森电梯配件有限公司祝您新春快乐",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -128,12 +122,8 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true, // 启用全屏壁纸功能,非Banner模式下生效
 	src: {
-		desktop: [
-			"/assets/banner/o.jpg",
-		], // 桌面横幅图片
-		mobile: [
-			"/assets/banner/o.jpg",
-		], // 移动横幅图片
+		desktop: ["/assets/banner/o.jpg"], // 桌面横幅图片
+		mobile: ["/assets/banner/o.jpg"], // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
 	carousel: {
@@ -191,11 +181,6 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:tiktok",
 			url: "https://www.douyin.com/user/MS4wLjABAAAAUQAkKBeDuCLNR0SY052hvOcVBca2P9fCeWAxjbLE4CfohMtjBMp3VJh3uF2QWS3j?from_tab_name=main&relation=0&vid=7534151914452782393",
 		},
-		{
-			name: "QQ",
-			icon: "fa6-brands:qq",
-			url: "https://qm.qq.com/q/F66bTXo0ec",
-		},
 	],
 };
 
@@ -221,7 +206,7 @@ export const commentConfig: CommentConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "公告", // 公告标题
-	content: "DragnWing-SE重磅上线！", // 公告内容
+	content: "钰森电梯配件有限公司祝您新春快乐", // 公告内容
 	closable: false, // 允许用户关闭公告
 	link: {
 		enable: false, // 启用链接
