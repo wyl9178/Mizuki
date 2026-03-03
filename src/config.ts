@@ -66,13 +66,13 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "龙尊的个人博客", // 主页横幅主标题
+			title: "龙尊の个人博客", // 主页横幅主标题
 
 			subtitle: [
-				"祝您新春快乐，马到成功！",
-				"望新的一年开开心心没烦恼",
-				"你好2026，新春快乐",
-				"钰森电梯配件有限公司祝您新春快乐",
+				"愿文字有温度，灵魂有出口",
+				"万物皆有裂痕，那是光照进来的地方",
+				"Stay hungry, Stay foolish.",
+				"阅过千山，终在此间",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -141,8 +141,8 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
-			name: "春节祝福",
-			url: "/2026.html",
+			name: "公司官网",
+			url: "https://ysdt.mirrorx.ltd/",
 			icon: "material-symbols:link",
 		},
 		{
@@ -206,7 +206,7 @@ export const commentConfig: CommentConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "公告", // 公告标题
-	content: "钰森电梯配件有限公司祝您新春快乐", // 公告内容
+	content: "这里什么也没有...", // 公告内容
 	closable: false, // 允许用户关闭公告
 	link: {
 		enable: false, // 启用链接

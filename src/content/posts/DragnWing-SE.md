@@ -1,5 +1,5 @@
 ---
-title: DragnWing-SE正式上线
+title: DragnWing-SE下载
 published: 2026-01-03
 description: 龙尊原创系统
 tags: [系统]
@@ -42,7 +42,7 @@ Hello大家好，时隔几个月我们启动了DragnWing计划并与宏伟一起
 
 2.邮箱联系：
 
-龙尊：1445630592@qq.com&wylnb@mirrorx.Itd
+龙尊：1445630592@qq.com
 
 阿宏：2252652993@qq.com
 
