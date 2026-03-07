@@ -142,7 +142,7 @@ export const navBarConfig: NavBarConfig = {
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
 			name: "龙翼产品下载中心",
-			url: "/pubilc/download.html",
+			url: "/download.html",
 			icon: "material-symbols:link",
 		},
 		{
