@@ -6,7 +6,7 @@ tags: [系统]
 category: DragnWing系列
 ---
 
-今天，DragnWing-STD正式版版上线！
+今天，DragnWing-STD正式版上线！
 ---
 大家好，时隔两个月我们又再次发布了DragnWing的新版本，以下是详细介绍：
 
