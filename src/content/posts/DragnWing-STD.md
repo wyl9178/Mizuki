@@ -6,7 +6,7 @@ tags: [系统]
 category: DragnWing系列
 ---
 
-今天，DragnWing-STD公测版上线！
+今天，DragnWing-STD正式版版上线！
 ---
 大家好，时隔两个月我们又再次发布了DragnWing的新版本，以下是详细介绍：
 
@@ -56,7 +56,7 @@ Winver制作: 钰森工作室:龙尊，sovietianqi
 
 阿宏：2252652993@qq.com
 
-五、下载方法：点击左侧板块进入作者抖音私信作者寻找下载方法
+五、下载方法：从https://www.123912.com/s/rb4Ovd-EzOL3下载或进入作者抖音私信作者寻找下载方法
 
 -----------------------------
 
