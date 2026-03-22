@@ -152,16 +152,9 @@ export const navBarConfig: NavBarConfig = {
 			children: [LinkPreset.About, LinkPreset.Friends],
 		},
 		{
-			name: "其他",
-			url: "#",
-			icon: "material-symbols:more-horiz",
-			children: [
-				{
-					name: "赞助支持",
-					url: "/donate/",
-					icon: "material-symbols:favorite",
-				},
-			],
+			name: "赞助支持",
+			url: "/donate/",
+			icon: "material-symbols:favorite",
 		},
 	],
 };
@@ -206,7 +199,7 @@ export const commentConfig: CommentConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "公告", // 公告标题
-	content: "这里什么也没有...", // 公告内容
+	content: "龙翼产品下载中心重磅上线", // 公告内容
 	closable: false, // 允许用户关闭公告
 	link: {
 		enable: false, // 启用链接
